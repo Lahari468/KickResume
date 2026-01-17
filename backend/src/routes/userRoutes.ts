@@ -6,7 +6,7 @@ const router = Router();
 
 // Public routes
 router.post('/register', registerUser);
-router.post('/login', loginUser);        // ✅ Add this line
+router.post('/login', loginUser);        
 
 // Protected route
 router.get('/me', protect, getUserProfile);

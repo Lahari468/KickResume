@@ -3,7 +3,6 @@
 KickResume is a full-stack **MERN web application** developed as part of a summer internship at **Edubot Technologies**.  
 It enables users to create, edit, and download **professional resumes** using customizable templates — now enhanced with an **AI-based summary generation API**.
 
----
 
 ## 🚀 Features
 
@@ -17,7 +16,6 @@ It enables users to create, edit, and download **professional resumes** using cu
 - **Template switching** without data loss
 - Fully **responsive and modern UI** with Tailwind CSS
 
----
 
 ## ⚙️ Tech Stack
 

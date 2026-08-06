@@ -29,4 +29,9 @@ It enables users to create, edit, and download **professional resumes** using cu
 | **Version Control** | Git & GitHub |
 | **Testing Tools** | Postman, Browser DevTools |
 
+## Live Demo
+
+Frontend: https://kick-resume-delta.vercel.app
+
+Backend API: https://kickresume-backend.onrender.com
 

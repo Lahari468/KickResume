@@ -11,8 +11,30 @@ import aiRoutes from "./routes/aiRoutes"; // ✅ AI route
 const app = express();
 
 // Middleware
+<<<<<<< HEAD
 app.use(cors());
 app.use(express.json());
+=======
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+app.use(express.json());
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Backend working");
+});
+
+app.use("/api/users", userRoutes);
+>>>>>>> e0c9373 (Initial Commit)
 
 // Routes
 app.use("/api/ai", aiRoutes);

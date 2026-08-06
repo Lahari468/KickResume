@@ -30,7 +30,11 @@ const Register: React.FC = () => {
    setIsLoading(true);
 
 try {
+<<<<<<< HEAD
   const res = await fetch('http://localhost:5173/api/users/register', {
+=======
+  const res = await fetch('http://localhost:8000/api/users/register', {
+>>>>>>> e0c9373 (Initial Commit)
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -38,7 +42,12 @@ try {
     body: JSON.stringify({ name, email, password }),
   });
 
+<<<<<<< HEAD
   const data = await res.json();
+=======
+  const text = await res.text();
+  const data = text ? JSON.parse(text) : {};
+>>>>>>> e0c9373 (Initial Commit)
 
   if (!res.ok) {
     console.error('Registration error:', data.message);

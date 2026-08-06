@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import {  Medal } from 'lucide-react';
 
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 const ResumeForm: React.FC = () => {
@@ -49,7 +49,7 @@ const ResumeForm: React.FC = () => {
 const handleGenerateSummary = async () => {
   try {
     setLoadingSummary(true);
-    const response = await fetch("http://localhost:8000/api/ai/generate-summary", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/ai/generate-summary`,{
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

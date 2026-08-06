@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -28,7 +26,7 @@ export const useAuth = () => {
   return context;
 };
 
-const API_BASE_URL = 'http://localhost:8000/api'; // change if different
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -55,7 +53,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       setUser(user);
       return true;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error:any) {
       console.error('Login failed:', error.response?.data?.message || error.message);
       return false;
@@ -67,7 +64,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const register = async (name: string, email: string, password: string): Promise<boolean> => {
     setIsLoading(true);
     try {
-      const res = await axios.post(`${API_BASE_URL}/auth/register`, { name, email, password });
+      const res = await axios.post(`${API_BASE_URL}/users/register`, { name, email, password });
 
       const { user, token } = res.data;
 
@@ -76,7 +73,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       setUser(user);
       return true;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Registration failed:', error.response?.data?.message || error.message);
       return false;

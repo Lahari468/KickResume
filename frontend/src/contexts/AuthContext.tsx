@@ -28,7 +28,7 @@ export const useAuth = () => {
   return context;
 };
 
-const API_BASE_URL = 'http://localhost:5000/api'; // change if different
+const API_BASE_URL = 'http://localhost:8000/api'; // change if different
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);

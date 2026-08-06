@@ -39,7 +39,7 @@ app.use("/api/users", userRoutes_1.default);
 app.use("/api/ai", aiRoutes_1.default);
 app.use("/api/users", userRoutes_1.default); // Handles /register, /login, etc.
 app.use("/api/resumes", resumeRoutes_1.default); // Resume CRUD routes
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 // ✅ Start server & connect DB
 const startServer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

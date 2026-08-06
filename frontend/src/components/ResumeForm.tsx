@@ -49,7 +49,7 @@ const ResumeForm: React.FC = () => {
 const handleGenerateSummary = async () => {
   try {
     setLoadingSummary(true);
-    const response = await fetch("http://localhost:5000/api/ai/generate-summary", {
+    const response = await fetch("http://localhost:8000/api/ai/generate-summary", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
